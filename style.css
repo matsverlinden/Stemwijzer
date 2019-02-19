@@ -19,5 +19,8 @@ body{
 	font-weight: bold;
 }
 #stemwijzer{
-	
+	width: 500px;
+}
+#onderwerp{
+	color: lightblue;
 }
