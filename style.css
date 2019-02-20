@@ -1,26 +1,112 @@
-body{
-	background-image: url('img/background.jpg');
-	background-repeat: no-repeat;
-	background-size: 100% auto;
+body {
+    background-image: url("img/background.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
 }
-#indexMain, #vragenMain{
-	background-color: white;
-	width:	800px;
-	margin: 0 auto;
+
+main,footer {
+    padding: 5%;
+    margin: 0px auto;
 }
-#terug{
-	color: grey;
-	font-size: 250%;
+
+main {
+    background-color: #fff;
+    width: 90%;
 }
-#overslaan{
-	text-decoration: none;
+button{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 15px;
+}
+#homepage {
+    display: block;
+}
+
+#start {
+    display: block;
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+    min-width: 188px;
+}
+
+#last {
+    background-color: #E7EAEB;
+    border: 1px #E7EAEB;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+#last:hover{
+	background-color: #cacdce
+}
+
+#question {
+    color: #00B5D8;
+    margin-bottom: 25px;
+}
+
+#statement {
+    font-size: 25px;
+    margin-bottom: 25px;
+    min-height: 100px;
+}
+
+#skip {
 	font-size: 150%;
-	color: grey;
-	font-weight: bold;
+    float: right;
+    background-color: #fff;
+    border: 1px #fff;
+    color: #9c9c9c;
 }
-#stemwijzer{
-	width: 500px;
+#skip:hover{
+	color: #cacdce;
 }
-#onderwerp{
-	color: lightblue;
+
+.options {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+    min-width: 188px;
+    margin-right: 1.33%;
+    margin-bottom: 5%;
+}
+
+.options:hover {
+    background-color: #00B5D8;
+    border-color: #00B5D8;
+}
+
+#results {
+    display: none;
+}
+
+#main-logo {
+    height: 56px;
+    width: 331px;
+}
+
+
+.title {
+    display: inline;
+    color: #01B4DC;
+    font-size: 33px;
+    font-weight: bold;
+}
+
+.main-selection{
+    font-size: 18px;
+    color: #fff;
+}
+
+.row {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.hidden {
+    display: none !important;
 }

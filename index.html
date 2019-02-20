@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Stemwijzer</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<meta charset="utf-8">
-	</head>
-	<body>
-		<main id="indexMain">
-			<img id="stemwijzer" src="img/stemwijzer.svg">
-			<a href="vragen.html" onclick="vraag1();">Start</a>
-		</main>
-		<script src="js/script.js"></script>
-	</body>
+<head>
+	<title>Stemwijzer</title>
+	<meta charset="utf-8">
+	<link rel="icon" href="img/favicon.png" type="image/gif">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="row">
+
+	<main>
+		<section id="homepage">		
+			<img id="main-logo" src="img/logo-stemwijzer.svg" alt="main logo">
+			
+			<h2>StemWijzer Tweede Kamer 2017</h2>
+			
+			<p class="title" id="title">Test uw politieke voorkeur aan de hand van </p>
+			<p class="title" id="questionCount"></p>
+			<p class="title">stellingen</p>
+
+			<button onclick="start()" class="btn btn-primary" id="start">Start</button>
+		</section>
+
+		<section id="questions" class="hidden">
+			<button onclick="setPreviousQuestion();" class="btn btn-primary" id="last"><img src="img/icon-arrow-back.svg"></button>
+			<h1 id="question"></h1>
+			<p id="statement"></p>
+			<button onclick="setNextQuestion(event);" class="btn btn-primary options" id="pro">Eens</button>
+			<button onclick="setNextQuestion(event);" class="btn btn-primary options" id="ambivalent">Geen van beide</button>
+			<button onclick="setNextQuestion(event);" class="btn btn-primary options" id="contra">Oneens</button>
+			<button onclick="setNextQuestion(event);" class="btn btn-primary options" id="skip">Sla deze vraag over <img id="arrowNext" src="img/icon-backspace-right.svg"></button>
+		</section>
+		<section id="results">
+			
+		</section>
+	</main>
+	<script src="data.js"></script>
+	<script src="script.js"></script>
+</body>
 </html>
+
