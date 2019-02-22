@@ -90,7 +90,7 @@ button{
 }
 
 
-.title {
+.title, .title2 {
     display: inline;
     color: #01B4DC;
     font-size: 33px;
