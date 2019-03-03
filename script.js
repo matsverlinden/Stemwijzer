@@ -6,13 +6,15 @@ var statement = document.getElementById('statement');
 var answers = [];
 var questionCount = 0;
 var extraImportantSec = document.getElementById('extraImportantSec');
-
+var li = document.getElementById('li');
+var label = document.getElementById('label');
 
 function start() {
 	// voegt class toe aan homepage
 	homepage.classList.add("hidden");
 	questions.classList.remove("hidden");
 	extraImportantSec.classList.add("hidden");
+
 	setFirstQuestion();
 }
 	// Laat eerste vraag en statement zien
@@ -57,11 +59,11 @@ function extraImportant(){
 	extraImportantSec.classList.remove("hidden");
 	title2.innerHTML = "Zijn er onderwerpen die u extra belangrijk vind?";
 	h5.innerHTML = "Aangevinkte stellingen tellen extra mee bij het berekenen van het resulaat.";
-	subjects.forEach(function(subject){
-		createOpinion(subject);
+
+	subjects.forEach(function(subject, index){
+		var li = document.createElement("li");	
+		li.innerHTML = '<input type="checkbox"  " onclick="setHeavystatement(this)">';
+		label.innerHTML = subject.title;
 	});
 
-	// function(subject){
-	// 	var li = document.createElement("li");
-	// }
 }

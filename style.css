@@ -110,3 +110,10 @@ button{
 .hidden {
     display: none !important;
 }
+li{
+	list-style: none;
+}
+#ul{
+	background-color: #e2e2e2;
+	
+}
