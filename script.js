@@ -6,7 +6,6 @@ var statement = document.getElementById('statement');
 var answers = [];
 var questionCount = 0;
 var extraImportantSec = document.getElementById('extraImportantSec');
-var li = document.getElementById('li');
 var label = document.getElementById('label');
 
 function start() {
@@ -20,7 +19,7 @@ function start() {
 	// Laat eerste vraag en statement zien
 function setFirstQuestion() {
 	var subject = subjects[questionCount];
-	title.innerHTML = subject.title;
+	title.innerHTML = questionCount + 1 + '. ' + subjects[questionCount].title;
 	statement.innerHTML = subject.statement;
 }
 
@@ -30,15 +29,19 @@ function saveAnswer(event){
 }
 
 function setNextQuestion(){
-	if (questionCount + 1 == subjects.length) {
-		extraImportant();
-		return;
-	}
 	questionCount ++;
-	var subject = subjects[questionCount];
-	title.innerHTML = subject.title;
-	statement.innerHTML = subject.statement;
-		saveAnswer(event);
+ 	var subject = subjects[questionCount];
+
+	if (questionCount === subjects.length) {
+		extraImportant();
+	} else if (questionCount <= subjects.length) {
+		title.innerHTML = questionCount + 1 + '. ' + subjects[questionCount].title;
+		statement.innerHTML = subject.statement;
+	} else {
+		return;
+}
+	saveAnswer(event);
+
 }
 
 function setPreviousQuestion(){
@@ -50,20 +53,26 @@ function setPreviousQuestion(){
 	questionCount --;
 
 	var subject = subjects[questionCount];
-	title.innerHTML = subject.title;
+	title.innerHTML = questionCount + 1 + '. ' + subjects[questionCount].title;
 	statement.innerHTML = subject.statement;
 	answers.pop();
 }
-function extraImportant(){
+function result(){
 	questions.classList.add("hidden");
-	extraImportantSec.classList.remove("hidden");
-	title2.innerHTML = "Zijn er onderwerpen die u extra belangrijk vind?";
-	h5.innerHTML = "Aangevinkte stellingen tellen extra mee bij het berekenen van het resulaat.";
-
-	subjects.forEach(function(subject, index){
-		var li = document.createElement("li");	
-		li.innerHTML = '<input type="checkbox"  " onclick="setHeavystatement(this)">';
-		label.innerHTML = subject.title;
-	});
-
+	
 }
+// function extraImportant(){
+// 	questions.classList.add("hidden");
+// 	extraImportantSec.classList.remove("hidden");
+// 	title2.innerHTML = "Zijn er onderwerpen die u extra belangrijk vind?";
+// 	h5.innerHTML = "Aangevinkte stellingen tellen extra mee bij het berekenen van het resulaat.";
+
+// 	subjects.forEach(function(subject, index){
+// 		var li = document.createElement("li");
+// 		var label = document.createElement("label");
+// 		ul.appendChild(li);
+// 		ul.appendChild(label);
+// 		li.innerHTML = '<input type="checkbox" onclick="setHeavystatement(this)">';
+// 		label.innerHTML = subject.title;
+// 	});
+// }
