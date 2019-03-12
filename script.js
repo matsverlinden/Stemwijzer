@@ -3,17 +3,21 @@ var questions = document.getElementById('questions');
 var title = document.getElementById('question');
 var title2 = document.getElementById('title2');
 var statement = document.getElementById('statement');
-var answers = [];
-var questionCount = 0;
 var extraImportantSec = document.getElementById('extraImportantSec');
 var label = document.getElementById('label');
+var h3 = document.getElementById('h3');
+var percent = document.getElementById('percent');
+var resultSec = document.getElementById('resultSec');
+var numberOne = document.getElementById('numberOne');
+var answers = [];
+var questionCount = 0;
 
 function start() {
 	// voegt class toe aan homepage
 	homepage.classList.add("hidden");
 	questions.classList.remove("hidden");
 	extraImportantSec.classList.add("hidden");
-
+	resultSec.classList.add("hidden");
 	setFirstQuestion();
 }
 	// Laat eerste vraag en statement zien
@@ -33,7 +37,7 @@ function setNextQuestion(){
  	var subject = subjects[questionCount];
 
 	if (questionCount === subjects.length) {
-		extraImportant();
+		result();
 	} else if (questionCount <= subjects.length) {
 		title.innerHTML = questionCount + 1 + '. ' + subjects[questionCount].title;
 		statement.innerHTML = subject.statement;
@@ -59,7 +63,10 @@ function setPreviousQuestion(){
 }
 function result(){
 	questions.classList.add("hidden");
-	
+	resultSec.classList.remove("hidden");
+	h3.innerHTML = "Uw mening komt het best overeen met:";
+	numberOne.innerHTML = "(Beste uitkomst)";
+	percent.innerHTML = "100%";
 }
 // function extraImportant(){
 // 	questions.classList.add("hidden");
