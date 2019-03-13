@@ -66,6 +66,7 @@ function result(){
 	resultSec.classList.remove("hidden");
 	h3.innerHTML = "Uw mening komt het best overeen met:";
 	numberOne.innerHTML = "(Beste uitkomst)";
+	
 	percent.innerHTML = "100%";
 }
 // function extraImportant(){
