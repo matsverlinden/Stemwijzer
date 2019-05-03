@@ -15,9 +15,9 @@ var questionCount = 0;
 function start() {
 	// voegt class toe aan homepage
 	homepage.classList.add("hidden");
-	questions.classList.remove("hidden");
 	extraImportantSec.classList.add("hidden");
 	resultSec.classList.add("hidden");
+		questions.classList.remove("hidden");
 	setFirstQuestion();
 }
 	// Laat eerste vraag en statement zien
@@ -54,6 +54,10 @@ function setPreviousQuestion(){
 	questions.classList.add("hidden");
 		return;
 	}
+	if (questionCount == 12) {
+		homepage.classList.remove("hidden");
+		resultSec.classList.add("hidden");
+	}
 	questionCount --;
 
 	var subject = subjects[questionCount];
@@ -61,6 +65,7 @@ function setPreviousQuestion(){
 	statement.innerHTML = subject.statement;
 	answers.pop();
 }
+
 function result(){
 	questions.classList.add("hidden");
 	resultSec.classList.remove("hidden");
@@ -68,7 +73,11 @@ function result(){
 	numberOne.innerHTML = "(Beste uitkomst)";
 	
 	percent.innerHTML = "100%";
+	
 }
+
+
+
 // function extraImportant(){
 // 	questions.classList.add("hidden");
 // 	extraImportantSec.classList.remove("hidden");
