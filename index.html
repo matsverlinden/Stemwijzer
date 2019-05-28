@@ -1,54 +1,43 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Stemwijzer</title>
-		<meta charset="utf-8">
-		<link rel="icon" href="img/favicon.png" type="image/gif">
-		<link rel="stylesheet" type="text/css" href="style.css">
-	</head>
-	<body class="row">
-		<main id="main">
-			<section id="homepage">
-				<img id="main-logo" src="img/logo-stemwijzer.svg" alt="main logo">
-				
-				<h2>StemWijzer Tweede Kamer 2017</h2>
-				
-				<p class="title" id="title">Test uw politieke voorkeur aan de hand van </p>
-				<p class="title" id="questionCount"></p>
-				<p class="title">stellingen</p>
-				
-				<button onclick="start()" class="btn btn-primary" id="start">Start</button>
-			</section>
-			<section id="questions" class="hidden">
-				<button onclick="setPreviousQuestion();" class="btn btn-primary" id="last"><img src="img/icon-arrow-back.svg"></button>
-				<h1 id="question"></h1>
-				<p id="statement"></p>
-				<button onclick="setNextQuestion(event);" class="btn btn-primary options" id="pro">Eens</button>
-				<button onclick="setNextQuestion(event);" class="btn btn-primary options" id="ambivalent">Geen van beide</button>
-				<button onclick="setNextQuestion(event);" class="btn btn-primary options" id="contra">Oneens</button>
-				<button onclick="setNextQuestion(event);" class="btn btn-primary options" id="skip">Sla deze vraag over <img id="arrowNext" src="img/icon-backspace-right.svg"></button>
-			</section>
-			<section id="extraImportantSec">
-				<p class="title2" id="title2"></p>
-				<h4 id="h5"></h4>
-				<ul id="ul">
-				</ul>
-			</section>
-			<section id="resultSec" class="hidden">
-				<button onclick="setPreviousQuestion();" class="btn btn-primary" id="last"><img src="img/icon-arrow-back.svg"></button>
-				<center>
-				<h3 id="h3"></h3>
-				<h3 id="numberOne"></h3>
-				</center>
-				<!-- <svg height="100" width="100">
-					<circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="transparent" />
-					<img src="img/parties/vvd.svg">
-				</svg> -->
-				<p id="percent"></p>
-				
-			</section>
-		</main>
-		<script src="data.js"></script>
-		<script src="script.js"></script>
-	</body>
+<head>
+	<title>Stemwijzer</title>
+	<meta charset="utf-8">
+	<link rel="icon" href="img/favicon.png" type="image/gif">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="row">
+
+	<main>
+		<section id="homepage">		
+			<img id="main-logo" src="img/logo-stemwijzer.svg" alt="main logo">
+			
+			<h4>StemWijzer Tweede Kamer 2017</h4>
+			
+			<p class="title" id="title">Test uw politieke voorkeur aan de hand van stellingen</p>
+
+			<button onclick="start()" class="btn btn-primary" id="start">Start</button>
+		</section>
+
+		<section id="questions" class="hidden">
+			<button  onclick="setPreviousQuestion()" class="btn btn-primary" id="last"><img src="img/icon-arrow-back.svg"></button>
+			<h1 id="question"></h1>
+			<p id="statement"></p>
+			<button class="btn btn-primary options" onclick="setNextQuestion(event)" id="pro">Eens</button>
+			<button class="btn btn-primary options" onclick="setNextQuestion(event)" id="ambivalent">Geen van beide</button>
+			<button class="btn btn-primary options" onclick="setNextQuestion(event)" id="contra">Oneens</button>
+			<button class="btn btn-primary options" onclick="setNextQuestion(event)" id="skip">Sla deze vraag over <img id="arrowNext" src="img/icon-backspace-right.svg"></button>
+			<label for="is-weighted">Klik de checkbox als je vindt dat deze vraag meer mee weegt</label>
+			<input type="checkbox" id="is-weighted">
+		</section>
+		<section id="results" class="hidden">
+			<h1 id="result1"></h1>
+			<h1 id="result2"></h1>
+			<h1 id="result3"></h1>
+		</section>
+	</main>
+	<script src="data.js"></script>
+	<script src="script.js"></script>
+</body>
 </html>
