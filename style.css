@@ -1,125 +1,101 @@
 body {
-    background-image: url("img/background.jpg");
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-attachment: fixed;
-    background-size: cover;
-    position: relative;
+	background-image: url("img/background.jpg");
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-attachment: fixed;
+	background-size: cover;
+	position: relative;
 }
 
 main,footer {
-    padding: 5%;
-    margin: 0px auto;
+	padding: 5%;
+	margin: 0px auto;
 }
 
 main {
-    background-color: #fff;
-    width: 90%;
+	background-color: #fff;
+	width: 90%;
 }
-button{
-	padding-top: 10px;
-	padding-bottom: 10px;
-	border-radius: 15px;
-}
-label{
 
-}
-li{
-	
-}
 #homepage {
-    display: block;
+	display: block;
 }
 
 #start {
-    display: block;
-    color: #fff;
-    background-color: #000;
-    border-color: #000;
-    min-width: 188px;
+	display: block;
+	color: #fff;
+	background-color: #000;
+	border-color: #000;
+	min-width: 188px;
 }
 
 #last {
-    background-color: #E7EAEB;
-    border: 1px #E7EAEB;
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-}
-#last:hover{
-	background-color: #cacdce
+	background-color: #E7EAEB;
+	border-color: #E7EAEB;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
 }
 
 #question {
-    color: #00B5D8;
-    margin-bottom: 25px;
+	color: #00B5D8;
+	margin-bottom: 25px;
 }
 
 #statement {
-    font-size: 25px;
-    margin-bottom: 25px;
-    min-height: 100px;
+	font-size: 25px;
+	margin-bottom: 25px;
+	min-height: 100px
 }
 
 #skip {
-	font-size: 150%;
-    float: right;
-    background-color: #fff;
-    border: 1px #fff;
-    color: #9c9c9c;
-}
-#skip:hover{
-	color: #cacdce;
+	float: right;
+	background-color: #fff;
+	border-color: #fff;
+	color: #9c9c9c;
 }
 
 .options {
-    background-color: #000;
-    color: #fff;
-    border-color: #000;
-    min-width: 188px;
-    margin-right: 1.33%;
-    margin-bottom: 5%;
+	background-color: #000;
+	color: #fff;
+	border-color: #000;
+	min-width: 188px;
+	margin-right: 1.33%;
+	margin-bottom: 5%;
 }
 
 .options:hover {
-    background-color: #00B5D8;
-    border-color: #00B5D8;
+	background-color: #00B5D8;
+	border-color: #00B5D8;
 }
 
-#results {
-    display: none;
-}
 
 #main-logo {
-    height: 56px;
-    width: 331px;
+	height: 56px;
+	width: 331px;
 }
 
 
-.title, .title2 {
-    display: inline;
-    color: #01B4DC;
-    font-size: 33px;
-    font-weight: bold;
+.title {
+	display: inline;
+	color: #01B4DC;
+	font-size: 33px;
+	font-weight: bold;
 }
 
 .main-selection{
-    font-size: 18px;
-    color: #fff;
+	font-size: 18px;
+	color: #fff;
 }
 
 .row {
-    margin-left: 15%;
-    margin-right: 15%;
+	margin-left: 15%;
+	margin-right: 15%;
 }
 
 .hidden {
-    display: none !important;
+	display: none !important;
 }
-li{
-	list-style: none;
-}
-#ul{
-	background-color: #e2e2e2;
-	
+#h2{
+	color: #00B5D8;
 }
